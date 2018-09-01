@@ -1,0 +1,90 @@
+/* 1 */
+{
+    "_id" : ObjectId("5b6fd0fdc73621a68935cd8d"),
+    "p_name" : "Da",
+    "img" : "/public/images/d01.jpg",
+    "title" : "cong so, da hoi",
+    "description" : "da bo",
+    "price" : "102$",
+    "type" : 1,
+    "plu" : "d01",
+    "origin" : "USA"
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("5b6fd0fdc73621a68935cd8f"),
+    "p_name" : "Da bong",
+    "img" : "/public/images/d02.jpg",
+    "title" : "cong so, da hoi",
+    "description" : "da bo",
+    "price" : "102$",
+    "type" : 1,
+    "plu" : "d02",
+    "origin" : "USA"
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("5b6fd0fdc73621a68935cd91"),
+    "p_name" : "The tao",
+    "img" : "/public/images/d03.jpg",
+    "title" : "The thao tennis",
+    "description" : "da bo",
+    "price" : "150$",
+    "type" : 1,
+    "plu" : "t01",
+    "origin" : "Indonesia"
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("5b6fd0fdc73621a68935cd93"),
+    "p_name" : "The thao",
+    "img" : "/public/images/d04.jpg",
+    "title" : "Leo nui, outdor",
+    "description" : "da bo",
+    "price" : "70$",
+    "type" : 1,
+    "plu" : "t02",
+    "origin" : "China"
+}
+
+/* 5 */
+{
+    "_id" : ObjectId("5b6fd0fdc73621a68935cd95"),
+    "p_name" : "The thao",
+    "img" : "/public/images/t01.jpg",
+    "title" : "Leo nui, outdor",
+    "description" : "da bo",
+    "price" : "70$",
+    "type" : 2,
+    "plu" : "t02",
+    "origin" : "China"
+}
+
+/* 6 */
+{
+    "_id" : ObjectId("5b6fd0fdc73621a68935cd97"),
+    "p_name" : "Da xu",
+    "img" : "/public/images/t05.jpg",
+    "title" : "cong so, da hoi",
+    "description" : "da bo",
+    "price" : "102$",
+    "type" : 2,
+    "plu" : "d01",
+    "origin" : "USA"
+}
+
+/* 7 */
+{
+    "_id" : ObjectId("5b6fd0fdc73621a68935cd99"),
+    "p_name" : "Da min",
+    "img" : "/public/images/t03.jpg",
+    "title" : "cong so, da hoi",
+    "description" : "da bo",
+    "price" : "100$",
+    "type" : 2,
+    "plu" : "d02",
+    "origin" : "USA"
+}

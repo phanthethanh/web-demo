@@ -1,0 +1,29 @@
+<p>{{title}}</p>
+{{# each products}}
+    <div clas="row">
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                {{this.p_name}}
+                <img src="{{this.img}}"" alt="..." class="img-reponsive">
+                <div class="caption">Caption: 
+                    {{this.title}}      
+                    <p>
+                        <div class="description">Description: 
+                            {{this.description}}
+                        </div>
+                        <div class="origin">Origin: 
+                             {{this.origin}}
+                        </div>
+                    </p>
+                    <div class="clearfix">
+                        <div class="price" style="color:blue">Price: <strong>{{this.price}}</strong></div>
+                        <div>
+                            <a href="#" class="btn btn-success pull-right">
+                                <span class="glyphicon glyphicon-shopping-cart" style="font-size:18px"></span>Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+{{/each}}
