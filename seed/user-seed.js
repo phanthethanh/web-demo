@@ -9,6 +9,7 @@ var users = [
     new User({
         userid: "em",
         password: "em",
+        passwordconfirm: "em",
         name: "NGUYEN PHUONG",
         email: "nguyen-phuong@gmail.com",
         address: "FUKUOKA",

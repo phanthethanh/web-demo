@@ -26,20 +26,34 @@
             </div>
       </form>
        <ul class="nav navbar-nav">
-        <li class="active"><a href="#"><span  style="color:aqua"><i> New Items ! </i></span></a></li>
+        <li><a href="#"><span  style="color:aqua"><i> New Items ! </i></span></a></li>
         <li><a href="#"><span  style="color:red"><strong> SALE ! </strong></span></a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-            {{user.username}}
-            <a href="/user/signin" data-toggle="tooltip" title="Sign In">
-            <span class="glyphicon glyphicon-user" style="font-size:18px"></span></a>
+          <a href="/shopping-cart/" data-toggle="tooltip" title="Shopping-Cart">
+            <span class="glyphicon glyphicon-shopping-cart" style="font-size:18px"></span>
+            <span class="badge" style="color:aqua">{{session.cart.total_Qty}}</span>
+          </a>
         </li>
-        <li><a href="" data-toggle="tooltip" title="Shopping-cart">
-            <span class="glyphicon glyphicon-shopping-cart" style="font-size:18px"></span></a></li>
+        <li class="dropdown" data-toggle="tooltip" title="User">
+            <a class="dropdown-toggle" href="/user/signin" data-toggle="dropdown">
+            <span class="glyphicon glyphicon-user" style="font-size:18px"></span></a>
+            <ul class="dropdown-menu">
+              {{# if login}}
+                <li><a href="/user/profile">Profile</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/user/logout">Logout</a></li>
+              {{else}}
+                <li><a href="/user/signin">Sign In</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/user/signup">Sign Up</a></li>
+              {{/if}}
+            </ul>
+        </li>
         <li><a href="/shop/help" data-toggle="tooltip" title="Help">
             <span class="glyphicon glyphicon-envelope" style="font-size:18px"></span></a></li>
-        <li class="dropdown" data-toggle="tooltip" title="Language setting">
+        <li class="dropdown" data-toggle="tooltip" title="Language">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">
           <span class="glyphicon glyphicon-globe" style="font-size:18px"></span></a>
           <ul class="dropdown-menu">

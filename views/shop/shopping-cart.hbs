@@ -1,0 +1,58 @@
+ {{# if products}}
+    <div clas="row">
+        <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+            <table class="table table-bordered">
+                <h1 class="text-center">SUMMARY</h1>
+                 <thead>
+                    <tr>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Control</th>
+                    </tr>
+                </thead>         
+                <tbody>
+                {{# each products}}
+                <tr>
+                    <td>{{ this.item.title }}</td>
+                    <td>{{ this.qty }}</td>
+                    <td>{{ this.price }} $</td>
+                    <td>
+                        <div class="btn-group">
+                            <button class="btn btn-primary btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
+                                Action
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Accretion 1</a></li>
+                                <li><a href="#">Reduce by 1</a></li>
+                                <li><a href="#">Remove All</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                {{/each}}
+                </tbody>
+            </table>
+        </div>       
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+            <strong>Total Quantity: {{total_Qty}}</strong>
+            <div class="pull-right"><strong>Total Amount: {{total_Price}} $</strong></div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+            <a href="/checkout" type="button" class="btn btn-success">Check Out</a>
+        </div>
+    </div>
+{{else}}
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+            <h2>No Item in Cart</h2>
+        </div>
+    </div>
+ {{/if}}
+ 

@@ -1,12 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+<div class="row">
+    <div class="col-md-4 col-md-offset-4"> 
+        <form action="/user/signup" method="post">
+            <div class="form-header">
+                <h1 class="text-center">Sign Up</h1>
+            </div>
+             {{# if hasError}}
+                <div class="alert alert-danger">
+                    {{# each msgErr}}
+                        <p>{{this}}</p>
+                    {{/each}}
+                </div>
+            {{/if}}
+            <div class="form-body">
+                <div class="form-group">
+                    <label for="User ID">User ID<span style="color:red"> *</span></label>
+                    <input type="text" placeholder="User ID" name="userid" class="form-control">                  
+                </div>
+                <div class="form-group">
+                    <label for="password">Password<span style="color:red"> *</span></label>
+                    <input type="password" placeholder="Password" name="password" class="form-control">
+                </div>
+            </div>
+            <div class="form-footer">
+                <div class="btn-group pull-right">
+                    <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+                    <button type="submit" class="btn btn-primary pull-left">Sign Up</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

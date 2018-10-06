@@ -4,27 +4,30 @@
             <div class="form-header">
                 <h1 class="text-center">Sign In</h1>
             </div>
+            {{# if hasError}}
+                <div class="alert alert-danger">
+                    {{# each msgErr}}
+                        <p>{{this}}</p>
+                    {{/each}}
+                </div>
+            {{/if}}
             <div class="form-body">
-                {{notCorrect}}
                 <div class="form-group">
                     <label for="User ID">User ID</label>
-                    <input type="text" placeholder="User ID" name="userid" id="userid" class="form-control">
-                   <label style="color:red">{{notid}}</label>                       
+                    <input type="text" placeholder="User ID" name="userid" id="userid" class="form-control">                     
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="text" placeholder="Password" name="password" id="password" class="form-control">
-                    <label style="color:red">{{notpassword}}</label>
+                    <input type="password" placeholder="Password" name="password" id="password" class="form-control">
                 </div>
             </div>
             <div class="form-footer">
                 <div class="btn-group pull-right">
-                    <!--<input type="hidden" name="_csrf" value="{{csrfToken}}">-->
+                    <input type="hidden" name="_csrf" value="{{csrfToken}}">
                     <button type="submit" class="btn btn-primary pull-left">Sign In</button>
-                    <button type="cancel" class="btn btn-danger pull-right">Cancel</button>
                 </div>
-                <a href="/user/createuser">Create new user</a>
+                <a href="/user/signup">Create new user</a>
             </div>
         </form>
     </div>
-</div>
+</d>
